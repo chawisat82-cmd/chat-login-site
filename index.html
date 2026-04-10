@@ -72,12 +72,15 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyBlIe8Ekei7UZD218fck9MI-VrLZRfh61I",
-      authDomain: "soudfawebcam.firebaseapp.com",
-      projectId: "soudfawebcam"
-    };
-
+  const firebaseConfig = {
+  apiKey: "AIzaSyBI1e8Ekei7UZDZ18fck9MI-VrLZRfh6lI",
+  authDomain: "soudfawebcam.firebaseapp.com",
+  projectId: "soudfawebcam",
+  storageBucket: "soudfawebcam.firebasestorage.app",
+  messagingSenderId: "108502213916",
+  appId: "1:108502213916:web:97119c46bb23180b0746d9",
+  measurementId: "G-7W2XLCD5E3"
+};
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
 
