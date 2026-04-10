@@ -60,10 +60,18 @@ try {
   msg.style.color = "red";
 }
 };
-</script>
+</script`;
+  } catch (e) {
+    msg.innerText = "Error: " + e.message;
+    msg.style.color = "red";
+  }
+};
+
 window.logout = async function () {
   await signOut(auth);
   window.location.reload();
 };
+</script>
 </body>
-</html>
+</html>>
+
