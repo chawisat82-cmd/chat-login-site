@@ -46,14 +46,13 @@ window.login = async function() {
   const password = document.getElementById("password").value;
   const msg = document.getElementById("msg");
 
-  try {
-    await signInWithEmailAndPassword(auth, email, password);
-    window.location.href = "/admin.html";
-    msg.style.color = "green";
-  } catch (e) {
-    msg.innerText = "Error: " + e.message;
-    msg.style.color = "red";
-  }
+try {
+  await signInWithEmailAndPassword(auth, email, password);
+  window.location.href = "/admin.html";
+} catch (e) {
+  msg.innerText = "Error: " + e.message;
+  msg.style.color = "red";
+}
 };
 </script>
 
