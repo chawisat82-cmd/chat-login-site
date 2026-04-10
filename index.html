@@ -48,7 +48,7 @@ window.login = async function() {
 
   try {
     await signInWithEmailAndPassword(auth, email, password);
-    msg.innerText = "Login OK ✅";
+    window.location.href = "/admin.html";
     msg.style.color = "green";
   } catch (e) {
     msg.innerText = "Error: " + e.message;
