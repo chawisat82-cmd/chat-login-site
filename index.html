@@ -48,13 +48,22 @@ window.login = async function() {
 
 try {
   await signInWithEmailAndPassword(auth, email, password);
-  window.location.href = "/admin.html";
+  document.body.innerHTML = `
+  <h1 style="text-align:center;margin-top:100px">مرحبا 😎</h1>
+  <p style="text-align:center">راك دخلتي بنجاح</p>
+  <div style="text-align:center">
+    <button onclick="logout()">Logout</button>
+  </div>
+`;
 } catch (e) {
   msg.innerText = "Error: " + e.message;
   msg.style.color = "red";
 }
 };
 </script>
-
+window.logout = async function () {
+  await signOut(auth);
+  window.location.reload();
+};
 </body>
 </html>
